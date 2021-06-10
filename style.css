@@ -99,6 +99,7 @@ body,html{
     transform-style: preserve-3d;
     transition: .8s;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     max-width: 650px;
     width: 100%;
 }
