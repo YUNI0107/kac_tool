@@ -1,0 +1,128 @@
+@media(max-width: 768px) {
+    .circle::before{
+        width: 250px;
+        height: 250px;
+        transform: translate(calc(-100% - 100px) , -100%);
+    }
+
+    .circle::after{
+        width: 350px;
+        height: 350px;
+        transform: translate(0px , 100px);
+    }
+
+    .card .front .top h1 {
+        font-size: 25px;
+    }
+
+    .card .front .top h2 {
+        font-size: 20px;
+    }
+
+    .card .front .top h2 span {
+        font-size: 25px;
+    }
+
+    .card .front .work_btn {
+        margin-top: 20px;
+    }
+
+    .card .front .main .each_input:nth-child(2) {
+        margin: 0;
+    }
+
+    .card .front .main .info_text label {
+        min-width: 20vw;
+    }
+
+    .card .front .bottom button{
+        width: 100%;
+    }
+
+}
+
+
+@media(max-width: 576px) {
+
+    .calo_web {
+        padding: 30px 15px;
+    }
+
+    .card .face {
+        padding: 30px 30px;
+    }
+
+    .card .front .top {
+        margin-bottom: 30px;
+    }
+
+    .card .front .main .each_input {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px 0;
+    }
+
+    .card .front input {
+        min-width: auto;
+    }
+
+    .card .front .main .info_text label {
+        min-width: auto;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .card .front .main .no_ans{
+        /* display: inline-block; */
+        display: none;
+    }
+
+    .card .front .bottom {
+        margin: 10px 0;
+    }
+
+    .card .front .bottom button{
+        margin-top: 0;
+    }
+
+    .card .back .calc_result{
+        flex-direction: column;
+    }
+
+    .card .back .result:nth-child(2){
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .card .back .info .info_text{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card .back .info .info_text p{
+        margin: 5px 0 0 0;
+    }
+
+    .card .back .bottom{
+        flex-direction: column;
+    }
+
+    .card .back .bottom .share_btn{
+        margin: 0 auto;
+    }
+
+    .card .back .bottom .back_btn{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+
+}
+
+
+
+@media(max-width: 320px) {
+    .card .face{
+        padding: 30px 15px;
+    }
+}

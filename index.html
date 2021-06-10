@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/fac.ico">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="CALORIES - 你的每日需求熱量" />
+    <meta property="og:image" content="./images/og.png" />
+    <meta property="og:description" content="讓CALORIES幫你計算，基礎代謝率BMR + 每日所需熱量TDEE 計算公式！" />
+    <title>CALORIES - 你的每日需求熱量</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./mobile.css">
+</head>
+
+<body>
+
+    <div class="calo_web">
+
+        <div class="middle_content">
+            <section class="circle"></section>
+            <div class="card">
+                <div class="face front">
+                    <div class="container">
+                        <div class="top">
+                            <h1>你的每日需求熱量 </h1>
+                            <h2>How much <span>CALORIES</span> do you need everyday?</h2>
+                            <p>基礎代謝率BMR + 每日所需熱量TDEE 計算公式</p>
+                        </div>
+                        <div class="main">
+                            <div class="each_input">
+                                <div class="info_text">
+                                    <label for="gender">性別 Gender</label>
+                                    <div class="no_ans">＃您未填寫</div>
+                                </div>
+                                <select name="gender" id="gender">
+                                    <option selected disabled id="gender">選擇你的性別</option>
+                                    <option value="m">男性 Man</option>
+                                    <option value="f">女性 Women</option>
+                                </select>
+                            </div>
+                            <div class="each_input">
+                                <div class="info_text">
+                                    <label for="work">工作量 Workload</label>
+                                    <div class="no_ans">＃您未填寫</div>
+                                </div>
+                                <select name="work" id="work">
+                                    <option selected disabled id="workload">選擇你的工作量</option>
+                                    <option value="0">輕度工作</option>
+                                    <option value="1">中度工作</option>
+                                    <option value="2">重度工作</option>
+                                </select>
+                                <div class="work_btn">
+                                    <button>
+                                        <img src="./images/work_icon.png">
+                                    </button>
+                                    <p>工作量參考</p>
+                                    <button class="toggle_btn">
+                                        <img src="./images/toggle.png">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="work_load">
+                                <h1>活動量表</h1>
+                                <p>輕度工作<span>大部分時間靜態或坐著的工作</span></p>
+                                <p>中度工作<span>機械操作、接待或家事等站立活動較多的工作</span></p>
+                                <p>重度工作<span>從事農耕、漁業、建築等的重度使用體力之工作。</span></p>
+                            </div>
+                            <div class="each_input">
+                                <div class="info_text">
+                                    <label for="age">年齡 Age</label>
+                                    <div class="no_ans">＃您未填寫</div>
+                                </div>
+                                <div class="input_section">
+                                    <input type="number" name="age" id="age" placeholder="輸入您的年齡"
+                                        oninput="if(value<0) value=0;" id="age">
+                                    <p>歲</p>
+                                </div>
+                            </div>
+                            <div class="each_input">
+                                <div class="info_text">
+                                    <label for="height">身高<span>Height</span></label>
+                                    <div class="no_ans">＃您未填寫</div>
+                                </div>
+                                <div class="input_section">
+                                    <input type="number" name="height" id="height" placeholder="輸入您的身高"
+                                        oninput="if(value<0) value=0;">
+                                    <p>公分</p>
+                                </div>
+                            </div>
+                            <div class="each_input">
+                                <div class="info_text">
+                                    <label for="weight">體重<span>Weight</span></label>
+                                    <div class="no_ans">＃您未填寫</div>
+                                </div>
+                                <div class="input_section">
+                                    <input type="number" name="weight" id="weight" placeholder="輸入您的身高"
+                                        oninput="if(value<0) value=0;">
+                                    <p>公斤</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <button class="calc">開始計算！Start！</button>
+                    </div>
+                </div>
+                <div class="face back">
+                    <div class="container">
+                        <div class="top">
+                            <h1>嗨！CALORIES已經幫您計算出結果了，</h1>
+                            <p>您的BMI 是 <span id="result_bmi">20.5</span> （ 正常BMI範圍= 18.5- 24 ）</p>
+                            <p id="bmi_info">已經超過正常的BMI，需要調整飲食囉！</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="calc_result">
+                            <div class="result brm">
+                                <h2 class="g_title">你的基礎代謝 (BMR)</h2>
+                                <h3><span id="result_b">0</span>大卡</h3>
+                            </div>
+                            <div class="result daily">
+                                <h2 class="g_title">每日所需總熱量約</h2>
+                                <h3><span id="result_t">2340</span>大卡</h3>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="info_text">
+                                <h2 class="g_title">減肥建議參考</h2>
+                                <p>基礎代謝＜一天吃進的熱量＜每日所需</p>
+                            </div>
+                            <div class="info_tips">
+                                <div class="tips">
+                                    <div class="tips_img">
+                                        <img src="./images/tip.png">
+                                    </div>
+                                    <p>一天攝取的熱量不要低於基礎代謝</p>
+                                </div>
+                                <div class="tips">
+                                    <div class="tips_img">
+                                        <img src="./images/tip.png">
+                                    </div>
+                                    <p>一天所攝取熱量不超過「每日所需」</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="share_btn">
+                            <div class="fb_img">
+                                <img src="./images/fb.png">
+                            </div>
+                            <p>分享到我的FaceBook</p>
+                        </div>
+                        <div class="back_btn">
+                            <p>返回計算頁面 ></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="link">
+                <p>資料來源</p>
+                <a href="https://www.careonline.com.tw/2021/03/TDEE.html" target="_blank">Care Online 照護線上 -
+                    減重必讀！基礎代謝率懶人包</a>
+            </div>
+        </div>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
