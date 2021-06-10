@@ -193,6 +193,9 @@ body,html{
     background-color: rgba(255, 255, 255, 0.534);
     color: #00B7A6;
     outline: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .card .front .main .each_input:nth-child(2) select{
@@ -307,6 +310,9 @@ body,html{
     background-color: rgba(255, 255, 255, 0.534);
     color: #00B7A6;
     outline: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .card .front input::placeholder{
