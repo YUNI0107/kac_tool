@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/fac.ico">
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yuni0107.github.io/kac_tool/" />
+    <meta property="fb:app_id" content="4315036485174483" />
     <meta property="og:title" content="CALORIES - 你的每日需求熱量" />
     <meta property="og:image" content="./images/og.png" />
+    <meta property="og:image:width " content="600" />
+    <meta property="og:image:height " content="600" />
     <meta property="og:description" content="讓CALORIES幫你計算，基礎代謝率BMR + 每日所需熱量TDEE 計算公式！" />
     <title>CALORIES - 你的每日需求熱量</title>
     <link rel="stylesheet" href="./style.css">
@@ -16,9 +19,9 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
 
     <div class="calo_web">
-
         <div class="middle_content">
             <section class="circle"></section>
             <div class="card">
@@ -147,12 +150,18 @@
                         </div>
                     </div>
                     <div class="bottom">
-                        <div class="share_btn">
-                            <div class="fb_img">
-                                <img src="./images/fb.png">
+                        <a href="">
+                            <div class="share_btn">
+                                <div class="fb_img">
+                                    <img src="./images/fb.png">
+                                </div>
+                                <p>分享到我的FaceBook</p>
+
                             </div>
-                            <p>分享到我的FaceBook</p>
-                        </div>
+                        </a>
+                        <div class="fb-share-button" data-href="https://yuni0107.github.io/kac_tool/"
+                        data-layout="button_count">
+                        </div> 
                         <div class="back_btn">
                             <p>返回計算頁面 ></p>
                         </div>

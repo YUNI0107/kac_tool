@@ -346,6 +346,7 @@ body,html{
 }
 
 
+
 .card .back .top{
     line-height: 30px;
 }
@@ -478,6 +479,10 @@ body,html{
 .card .back .bottom .back_btn:hover{
     color: #999;
 }
+
+/* .fb-share-button{
+    opacity: 0;
+} */
 
 
 .link{
