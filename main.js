@@ -100,7 +100,7 @@ window.fbAsyncInit = function () {
             method: 'share',
             href: 'https://yuni0107.github.io/kac_tool/',
             quote: `我的基礎代謝 (BMR)： ${TDEE}Kcal，我的每日所需總熱量（TDEE）： ${TDEE}Kcal！`,
-            hashtag: "持續保持健康！ CALORIES計算小工具"
+            hashtag: "#持續保持健康 #CALORIES計算小工具"
           }, function(response){
               
           });
