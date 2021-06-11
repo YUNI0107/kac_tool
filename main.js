@@ -99,7 +99,7 @@ window.fbAsyncInit = function () {
         FB.ui({
             method: 'share',
             href: 'https://yuni0107.github.io/kac_tool/',
-            quote: `我的基礎代謝 (BMR)： ${TDEE}Kcal，我的每日所需總熱量（TDEE）： ${TDEE}Kcal！`,
+            quote: `我的基礎代謝 (BMR) ${Math.ceil(BMR)}Kcal，我的每日所需總熱量（TDEE） ${Math.ceil(TDEE)}Kcal！`,
             hashtag: "#CALORIES計算小工具"
           }, function(response){
               
