@@ -124,7 +124,7 @@ body,html{
     background-color: #fff;
     min-height: 60vh;
     height: 100%;
-    transform:perspective(800px) rotateY(180deg) ;
+    transform:perspective(800px) rotateY(180deg) translateZ(1px);
 }
 
 .card.ans .front{
@@ -132,7 +132,7 @@ body,html{
 }
 
 .card.ans .back{
-    transform:perspective(800px) rotateY(0deg) ;
+    transform:perspective(800px) rotateY(0deg)  translateZ(1px);
 }
 
 

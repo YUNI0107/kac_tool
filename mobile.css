@@ -62,8 +62,13 @@
         margin: 20px 0;
     }
 
+    .card .front .main .each_input select{
+        padding: 5px 10px;
+    }
+
     .card .front input {
         min-width: auto;
+        padding: 5px 10px;
     }
 
     .card .front .main .info_text label {
