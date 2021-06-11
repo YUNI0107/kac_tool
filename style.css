@@ -98,7 +98,7 @@ body,html{
     border-right: solid 2px rgba(255, 255, 255, 0.2);
     border-bottom: solid 2px rgba(255, 255, 255, 0.2);
     transform-style: preserve-3d;
-    transition: .8s;
+    transition: transform .8s;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     max-width: 650px;

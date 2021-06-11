@@ -85,4 +85,26 @@ function TDEECalculate() {
 
 
 // FB Share
+// fb
+let share_btn = document.querySelector(".share_btn");
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: '4315036485174483',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v11.0'
+    });
+
+    share_btn.addEventListener("click",()=>{
+        FB.ui({
+            method: 'share',
+            href: 'https://yuni0107.github.io/kac_tool/',
+            quote: `我的基礎代謝 (BMR)： ${TDEE}Kcal，我的每日所需總熱量（TDEE）： ${TDEE}Kcal！`,
+            hashtag: "持續保持健康！ CALORIES計算小工具"
+          }, function(response){
+              
+          });
+    })
+};
+
 
